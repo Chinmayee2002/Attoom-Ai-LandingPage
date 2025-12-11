@@ -280,26 +280,51 @@
 
         <h2 class="connect-title">Let’s build the future, together</h2>
 
-        <form class="connect-form">
-          <input type="text" placeholder="Select Topic" class="input-field" />
+        <form class="connect-form" action="" id="contactForm">
+          <input
+            type="text"
+            id="topic"
+            name="topic"
+            placeholder="Enter Topic"
+            class="input-field"
+          />
 
-          <input type="text" placeholder="Enter name" class="input-field" />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter name"
+            class="input-field"
+          />
 
           <div class="row">
-            <input type="email" placeholder="Email" class="input-field half" />
+            <input
+              type="email"
+              id="emailid"
+              name="email"
+              placeholder="Email"
+              class="input-field half"
+            />
             <input
               type="text"
+              id="phone"
+              name="phone"
               placeholder="Phone (optional)"
               class="input-field half"
             />
           </div>
 
           <textarea
+            id="msgContent"
+            name="message"
             placeholder="Enter message"
             class="input-field textarea"
           ></textarea>
 
-          <button class="submit-btn">→</button>
+          <div class="submit-area">
+            <button type="submit" class="submit-btn">→</button>
+            <div class="alert">Your message sent</div>
+          </div>
         </form>
       </div>
     </div>
@@ -326,10 +351,18 @@
         </a>
       </div>
       <div>
-        <div class="footer-contact-text">contact@attoom.ai</div>
+        <div class="footer-contact-text">
+          <a href="mailto:contact@attoom.ai" style="color: inherit"
+            >contact@attoom.ai</a
+          >
+        </div>
         <div>© Attoom AI Technology Private Limited @2025</div>
       </div>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+    <script src="main.js"></script>
   </body>
-  <script src="main.js"></script>
 </html>
